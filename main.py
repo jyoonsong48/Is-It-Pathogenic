@@ -1,6 +1,10 @@
 import requests
 import streamlit as st
 
+st.set_page_config(
+    page_title = "Is It Pathogenic?",
+    page_icon = "🧬")
+
 def hgvs_req(chrom, pos, ref, alt):
     for_search = f"{chrom}:g.{pos}{ref}>{alt}"
     return for_search
